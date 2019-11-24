@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Single page layout</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style type="text/css">
+
+      *,
+      *::before,
+      *::after{
+                box-sizing: border-box;
+
+      }
+      *:focus{
+          outline: none;
+
+      }
+
+      body{
+          padding: 0;
+          margin: 0;
+          background: #000;
+          color:white;
+          font-family:"Oxygen" , sans-serif;
+
+
+      }
+      a{
+        text-decoration: none;
+      }
+      img{
+        width :80%;
+      }
+      .home img{
+          width: :100%;
+          -webkit-filter: grayscale(100%)
+          constrast(100%)
+          filter:grayscale(100%) contrast(200%)
+          brightness(60%);
+
+      }
+      .Project img{
+        filter: :grayscale(100%);
+
+      }
+      aside{
+        position: :fixed;
+        background:#222;
+        top:0px;
+        left:0px;
+        width:120px;
+        height:100%;
+        overflow: none;
+        z-index:1;
+        text-align: center;
+        padding: 0;
+
+      }
+      aside img{
+        filter: grayscale(100%) contrast(50%)
+        brightness(100%);
+        margin-bottom: -5px;
+
+      }
+
+      .material-icons.md-36{
+        font-size:36px;
+      }
+
+      aside a{
+        display: black;
+        padding: 15px 0;
+        color: white;
+        transition: all 0.50s;
+        text-transform:uppercase;
+        font-style: 0.75em;
+        letter-spacing: 2px;
+
+      }
+
+      aside p{
+        margin: 0;
+        padding: 0;
+
+      }
+      aside a:hover{
+        background: #000;
+
+      }
+
+      aside nav a: nth-child(2){
+        background: #000;
+
+      }
+
+      aside nav a :nth-child(2):hover{
+        background: #b2b2b2;
+        color:#222;
+      }
+
+
+      main{
+        max-width: 950px;
+        background: #000px;
+        margin-left: 20%;
+        padding: 12px 50px 12px 50px;
+
+      }
+
+      header{
+        text-align: center;
+        letter-spacing: 2px;
+      }
+      header h5{
+        font-weight: 300;
+        font-size: 1em;
+        letter-spacing: 4px;
+        color: #b2b2b2;
+
+      }
+
+      .image,
+      .person,
+      .mail{
+        line-height: 1.5em;
+        letter-spacing: 1px;
+        font-weight: 300;
+      }
+      .image h2,
+      .person,
+      .mail{
+        font-weight: 300;
+        text-transform: uppercase;
+        text-decoration: underline;
+        padding-bottom: 10px;
+        letter-spacing: 4px;
+      }
+      .person h3{
+        font-weight: 300;
+        margin: 50px 0;
+      }
+
+      .container{
+        width :100%;
+        background-color: #b2b2b2;
+
+      }
+      .Skills{
+        text-align: right;
+        padding-right: 200px;
+        line-height: 30px;
+        color: white;
+        background-color: #424242;
+
+      }
+      .figma{
+        width:95%;
+      }
+      .Python{
+        width:60%;
+      }
+      .JavaScript{
+        width: 75%;
+      }
+      .C++{
+        width: 65%;
+      }
+
+    </style>
+  </head>
+  <body>
+<aside>
+  <nav>
+    <img src="people.jpg" alt="">
+      <a href="#home" ><i class="material-icons md-36">home</i><p>Home</p></a>
+    <a href="#person" ><i class="material-icons md-36">person</i><p>About</p></a>
+    <a href="#image" ><i class="material-icons md-36">image</i><p>Project</p></a>
+    <a href="#mail" ><i class="material-icons md-36">mail</i><p>Contact</p></a>
+  </nav>
+</aside>
+<! mapping is done with the object above for them to be clicked at the same time>
+<nav class="mobile-nav">
+  <a href="#home"></a>
+  <a href="#person"></a>
+  <a href="#image"></a>
+  <a href="#mail"></a>
+</nav>
+
+<nav>
+  <main>
+    <header class = "home"  id = "home" >
+      <h1> Sundaraman,Here!</h1>
+      <h5>Developer: Python and JavaScript</h5>
+      <img src="people.jpg" alt="">
+    </header>
+  </main>
+  <section class="person" id = "person"> <! used instead of 'div'for grouping the terms together and use while editing>
+    <h2>About me</h2>
+    <p>
+      <span>This Sundaraman!</span> I sense you have a flare for technology , however not having time to explore it??
+      Don't worry we are here, for your assit . I'm Developer specialized in Python , C and C++ . I believe learning and growing goes hand in hand.
+
+    </p>
+    <p>
+      <h3>My Skills</h3>
+      <p>Python</p>
+      <div class="Skills Python">90%</div>
+      </div>
+      <p>C++</p>
+      <div class="Skills C++">75%</div>
+      <p>JavaScript</p>
+      <div class="Skills JavaScriptS">10%</div>
+    </p>
+  </section>
+  <section class="Project" id = "image"><!used instead of folio>
+    <h2>Project</h2>
+      <div class="row-halves">
+        <div class="col">
+          <h3>Work in Progress...</h3>
+        <!  <img src="people.jpg" alt="">
+        </div>
+      </div>
+  </section>
+
+<section class="contact" id = "mail">
+  <h2>Contact</h2>
+  <div class="container">
+    <form action="" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+      <label for="email">Email</label>
+      <input type="email" id="Email" name="email">
+      <textarea name="message" id="message" style="height : 200px"></textarea>
+      <input type="submit" value="message">
+    </form>
+  </div>
+</section>
+<footer>
+<section class=" top-bar">
+    <a href="#"><i class="fab fa-instagram"></a>
+    <a href="#"> <i class="fab fa-github"></i> </a>
+    <a href="#"> <i class="fab fa-telegram"></i> </a>
+</section>
+<section class="bottom-bar">
+  <p>&copy 2019 | All rights reserved </p> <!//for creating the opy right line at the last>
+</section>
+
+</footer>
+</nav>
+
+
+
+  </body>
+</html>
